@@ -1,14 +1,19 @@
-import React from 'react';
-import FunctionClick from './components/FunctionClick';
-import ClassClick from './components/ClassClick';
-import EventBind from './components/EventBind';
+import React from 'react'
+import './regularStyles.css'
+import RenderPropsCounter from './components/RenderPropsCounter'
+import ClickCouterTwo from './components/ClickCouterTwo'
+import HoverCounterTwo from './components/HoverCounterTwo'
+import ComponentA from './components/ComponentA'
+import { UserProvider } from './components/UserContext'
 
 function App() {
   return (
     <div className="App">
-      {/* <FunctionClick />
-      <ClassClick /> */}
-      <EventBind />
+      
+      <UserProvider value="Julius">
+        <ComponentA />
+      </UserProvider>
+      
     </div>
   );
 }
